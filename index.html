@@ -32,7 +32,14 @@
     .service-block { margin-bottom: 1.5rem; }
     .service-block h3 { margin-bottom: 0.2rem; }
     .note { font-style: italic; color: #888; font-size: 0.9rem; }
+    .hidden { display: none; }
   </style>
+  <script>
+    function switchLanguage() {
+      document.getElementById('en').classList.toggle('hidden');
+      document.getElementById('it').classList.toggle('hidden');
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -42,76 +49,147 @@
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="language-switch">Italiano</div>
+    <div class="language-switch" onclick="switchLanguage()">Italiano / English</div>
   </header>
 
   <div class="container">
-    <section class="hero">
-      <h1>Davide Chiatti | Photo Editor</h1>
-      <p>
-        Davide Chiatti is an emerging photographer and high school student based in Ancona, Italy.
-        Passionate about capturing the subtle beauty of the world around us, he explores a wide range
-        of subjects—from everyday moments to abstract compositions—through both the lens and the
-        editing process.
-      </p>
-      <p>
-        With a keen eye for storytelling, Davide sees photography not only as a means of documentation,
-        but as a powerful tool to shape emotions, evoke meaning, and give form to personal narratives.
-        Constantly learning and evolving, he is dedicated to refining his craft and discovering new ways
-        to express the extraordinary hidden in the ordinary.
-      </p>
-    </section>
+    <!-- English Version -->
+    <div id="en">
+      <section class="hero">
+        <h1>Davide Chiatti | Photo Editor</h1>
+        <p>
+          Davide Chiatti is an emerging photographer and high school student based in Ancona, Italy.
+          Passionate about capturing the subtle beauty of the world around us, he explores a wide range
+          of subjects—from everyday moments to abstract compositions—through both the lens and the
+          editing process.
+        </p>
+        <p>
+          With a keen eye for storytelling, Davide sees photography not only as a means of documentation,
+          but as a powerful tool to shape emotions, evoke meaning, and give form to personal narratives.
+          Constantly learning and evolving, he is dedicated to refining his craft and discovering new ways
+          to express the extraordinary hidden in the ordinary.
+        </p>
+      </section>
 
-    <section class="gallery-section">
-      <h2>🖼️ Edited Works Gallery</h2>
-      <img class="gallery-image" src="IMG_4595_optimized.jpg" alt="Edited Photo by Davide Chiatti" />
-      <img class="gallery-image" src="IMG_2566.jpg” alt="Edited Photo by Davide Chiatti" />
-      <img class="gallery-image" src="IMG_1365.jpg” alt="Edited Photo by Davide Chiatti" />
-    </section>
+      <section class="gallery-section">
+        <h2>🖼️ Edited Works Gallery</h2>
+        <img class="gallery-image" src="img/IMG_1365.jpg" alt="A Casual Sunset" />
+	<img class="gallery-image" src="img/IMG_2566.jpg" alt="The Sea" />
+	<img class="gallery-image" src="img/IMG_4595 copia.jpg" alt="A Strange Tree" />
+      </section>
 
-    <section class="services-section" id="services">
-      <h2>🎨 Photo Editing Services</h2>
-      <div class="service-block">
-        <h3>1. Basic Photo Retouching</h3>
-        <p>Brightness, contrast, color correction, cropping, minor adjustments.</p>
-        <p>€2–5 per photo — Package (10 photos): €15–30</p>
-      </div>
-      <div class="service-block">
-        <h3>2. Advanced Editing / Color Grading</h3>
-        <p>Creative or cinematic editing, custom tones, specific styles.</p>
-        <p>€7–10 per photo — Package (10 photos): €30–45</p>
-      </div>
-      <div class="service-block">
-        <h3>3. Portrait Retouching</h3>
-        <p>Skin, eyes, lighting corrections, removal of small imperfections (no drastic changes).</p>
-        <p>€5–10 per photo — Package (5 portraits): €15–25</p>
-      </div>
-      <div class="service-block">
-        <h3>4. Background Cleanup / Object Removal</h3>
-        <p><span class="note">Not available at the moment.</span></p>
-      </div>
-      <div class="service-block">
-        <h3>5. Batch Editing for Social / Portfolio</h3>
-        <p>Consistent set of visuals for Instagram feeds, portfolios, moodboards, etc.</p>
-        <p>€20–40 for 15–20 images</p>
-      </div>
-      <div class="service-block">
-        <h3>6. Before/After Package for Content Creators</h3>
-        <p>Includes short before/after video animation for platforms like TikTok, Instagram Reels.</p>
-        <p>€15–25 for 3 photos + video</p>
-      </div>
-    </section>
+      <section class="services-section" id="services">
+        <h2>🎨 Photo Editing Services</h2>
+        <div class="service-block">
+          <h3>1. Basic Photo Retouching</h3>
+          <p>Brightness, contrast, color correction, cropping, minor adjustments.</p>
+          <p>€2–5 per photo — Package (10 photos): €25–40</p>
+        </div>
+        <div class="service-block">
+          <h3>2. Advanced Editing / Color Grading</h3>
+          <p>Creative or cinematic editing, custom tones, specific styles.</p>
+          <p>€7–10 per photo — Package (10 photos): €45–70</p>
+        </div>
+        <div class="service-block">
+          <h3>3. Portrait Retouching</h3>
+          <p>Skin, eyes, lighting corrections, removal of small imperfections (no drastic changes).</p>
+          <p>€5–10 per photo — Package (5 portraits): €20–35</p>
+        </div>
+        <div class="service-block">
+          <h3>4. Background Cleanup / Object Removal</h3>
+          <p><span class="note">Not available at the moment.</span></p>
+        </div>
+        <div class="service-block">
+          <h3>5. Batch Editing for Social / Portfolio</h3>
+          <p>Consistent set of visuals for Instagram feeds, portfolios, moodboards, etc.</p>
+          <p>€20–40 for 15–20 images</p>
+        </div>
+        <div class="service-block">
+          <h3>6. Before/After Package for Content Creators</h3>
+          <p>Includes short before/after video animation for platforms like TikTok, Instagram Reels.</p>
+          <p>€15–25 for 3 photos + video</p>
+        </div>
+      </section>
 
-    <section class="services-section" id="contact">
-      <h2>📩 Contact</h2>
-      <p>For inquiries, commissions, or collaborations, please get in touch via email or Instagram:</p>
-      <ul>
-        <li><strong>Email:</strong> completely.raw.visuals@gmail.com</li>
-        <li><strong>Phone:</strong> +39 351 613 6629</li>
-        <li><strong>Instagram:</strong> <a style="color:gold" href="https://instagram.com/__cr.visuals__" target="_blank">@__cr.visuals__</a></li>
-      </ul>
-    </section>
+      <section class="services-section" id="contact">
+        <h2>📩 Contact</h2>
+        <p>For inquiries, commissions, or collaborations, please get in touch via email or Instagram:</p>
+        <ul>
+          <li><strong>Email:</strong> completely.raw.visuals@gmail.com</li>
+          <li><strong>Phone:</strong> +39 351 613 6629</li>
+          <li><strong>Instagram:</strong> <a style="color:gold" href="https://instagram.com/__cr.visuals__" target="_blank">@__cr.visuals__</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Italian Version -->
+    <div id="it" class="hidden">
+      <section class="hero">
+        <h1>Davide Chiatti | Photo Editor</h1>
+        <p>
+          Davide Chiatti è un giovane fotografo emergente e studente delle superiori con base ad Ancona, Italia.
+          Appassionato nel catturare la bellezza nascosta nelle piccole cose, esplora una vasta gamma di soggetti—
+          dai momenti quotidiani a composizioni astratte—sia tramite la fotocamera che attraverso l'editing.
+        </p>
+        <p>
+          Con un forte senso per il racconto visivo, Davide vede la fotografia non solo come mezzo di documentazione,
+          ma come uno strumento potente per evocare emozioni e dare forma a narrazioni personali. Sempre in crescita
+          ed evoluzione, è determinato a perfezionare il suo stile e scoprire nuovi modi per esprimere l'invisibile nell'ordinario.
+        </p>
+      </section>
+
+      <section class="gallery-section">
+        <h2>🖼️ Galleria Lavori Editati</h2>
+        <img class="gallery-image" src="IMG_1365.jpg" alt="Un Casuale Tramonto" />
+	<img class="gallery-image" src="img/IMG_2566.jpg" alt="Il Mare" />
+	<img class="gallery-image" src="img/IMG_4595 copia.jpg" alt="Uno Strano Albero" />
+      </section>
+
+      <section class="services-section" id="services">
+        <h2>🎨 Servizi di Editing Fotografico</h2>
+        <div class="service-block">
+          <h3>1. Basic Photo Retouching</h3>
+          <p>Luminosità, contrasto, colori, ritaglio, piccoli ritocchi.</p>
+          <p>€2–5 a foto — Pacchetto (10 foto): €25–40</p>
+        </div>
+        <div class="service-block">
+          <h3>2. Advanced Editing / Color Grading</h3>
+          <p>Editing più creativo o cinematografico, tonalità personalizzate, stile specifico.</p>
+          <p>€7–10 a foto — Pacchetto (10 foto): €45–70</p>
+        </div>
+        <div class="service-block">
+          <h3>3. Portrait Retouching</h3>
+          <p>Correzione pelle, occhi, luci, rimozione imperfezioni (no cambi drastici).</p>
+          <p>€5–10 a foto — Pacchetto (5 ritratti): €20–35</p>
+        </div>
+        <div class="service-block">
+          <h3>4. Background Cleanup / Object Removal</h3>
+          <p><span class="note">Non disponibile al momento.</span></p>
+        </div>
+        <div class="service-block">
+          <h3>5. Batch Editing per Social / Portfolio</h3>
+          <p>Serie coerente di immagini per feed Instagram, portfolio, moodboard, ecc.</p>
+          <p>€20–40 per 15–20 immagini</p>
+        </div>
+        <div class="service-block">
+          <h3>6. Before/After Package per Content Creators</h3>
+          <p>Include breve animazione prima/dopo per TikTok, Instagram Reels, ecc.</p>
+          <p>€15–25 per 3 foto + video</p>
+        </div>
+      </section>
+
+      <section class="services-section" id="contact">
+        <h2>📩 Contatti</h2>
+        <p>Per richieste, commissioni o collaborazioni, contattami via email o Instagram:</p>
+        <ul>
+          <li><strong>Email:</strong> completely.raw.visuals@gmail.com</li>
+          <li><strong>Telefono:</strong> +39 351 613 6629</li>
+          <li><strong>Instagram:</strong> <a style="color:gold" href="https://instagram.com/__cr.visuals__" target="_blank">@__cr.visuals__</a></li>
+        </ul>
+      </section>
+    </div>
   </div>
+
   <footer>
     <div class="footer-info">
       © 2025 CR.Visuals — Davide Chiatti<br/>
